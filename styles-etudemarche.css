@@ -1,0 +1,461 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #52B788;
+    font-family: 'Roboto';
+}
+
+#container{
+    width: 1227px ;
+    margin: auto;
+    height: 4900px;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: "Roboto";
+}
+
+
+
+#nav-bar{
+    padding-top: 20px;
+}
+
+#nav-bar a{
+    font-style: normal;
+    letter-spacing: 10%;
+    line-height: 35px;
+    height:40px;
+    text-align: center;
+    text-decoration:none;
+    color: black;
+    width: 150px;
+    font-family: "Bebas Neue" ;
+}
+
+
+#nav-bar a:hover{
+    background-color: #327e5b;
+    color: white;
+}
+
+#firstelem, .marge {
+    float: left;
+}
+
+#firstelem{
+    margin-left: 180px;
+}
+
+#lastelem{
+    float: right;
+    margin-right: 42.5px;
+}
+
+#logo{
+    position: relative;
+    width: 170px;
+    height: 57px;
+    top: 60px;
+    left: 42.5px;
+    background-image: url(img/logo_iut.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+
+
+#banner{
+    background-image: url(img/etude_marche/banniere.jpg);
+    background-position-y: -200px;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    box-sizing: border-box;
+    width: 1142px;
+    height: 319px;
+    margin: auto;
+    margin-top: 100px;
+    filter: drop-shadow(5px 5px 4px #52B788);
+}
+
+#click-ensavoirplus{
+    position: relative;
+    display: flex;
+    z-index: 99;
+    top: 79px;
+    left: 857px;
+    height: 100px;
+    width: 240px;
+
+}
+
+#click-inscription{
+    position: relative;
+    display: flex;
+    z-index: 99;
+    top: 59px;
+    left: 857px;
+    height: 100px;
+    width: 240px;
+
+}
+
+
+#click-inscription a, #click-ensavoirplus a{
+
+    font-family: 'Roboto';
+    letter-spacing: 5px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    font-size: 115%;
+
+    text-transform: uppercase;
+    text-decoration: unset;
+    color: white;
+    font-weight: bold;
+}
+
+#click-inscription a{
+    line-height: 50px;
+}
+
+#click-ensavoirplus a{
+    line-height: 90px;
+}
+
+#click-inscription a::after, #click-ensavoirplus a::after{
+
+
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(143, 255, 194, 0.5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateX(-240px);
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+#click-inscription a:hover::after, #click-ensavoirplus a:hover::after{
+    transform: translateX(0);
+}
+
+
+
+#titre{
+
+    width: 1142px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: left;
+
+
+
+}
+
+#titre h1{
+
+    font-size: 200%;
+    font-family: "Bebas Neue";
+
+}
+
+
+#zonedetext .texte{
+
+    width: 1122px;
+    margin: auto;
+    margin-top: 50px;
+
+    text-align: center;
+
+    padding: 10px;
+
+}
+
+#zonedetext div p{
+
+    font-size: 20;
+    font-weight: bold;
+    font-family: "Roboto";
+    line-height: 25px;
+
+}
+
+
+#img1{
+
+    background-image: url(img/etude_marche/image1.jpg);
+    background-position-y: -170px;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    box-sizing: border-box;
+    height: 300px;
+    width: 1142px;
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+#img2{
+
+    background-image: url(img/etude_marche/image2.jpg);
+    background-position-y: -200px;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    box-sizing: border-box;
+    height: 350px;
+    width: 1142px;
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+#img3{
+
+    background-image: url(img/etude_marche/image3.jpg);
+    background-position-y: -200px;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    box-sizing: border-box;
+    height: 350px;
+    width: 1142px;
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+#img1, #img2, #img3{
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+}
+
+#img1:hover, #img2:hover, #img3:hover{
+
+    transform: scale(1.01);
+}
+
+#text5 ul{
+
+    list-style: "-";
+    padding: 10px;
+    text-align: left;
+    font-size: 20;
+    font-weight: bold;
+    font-family: "Roboto";
+    line-height: 25px;
+
+}
+
+/* MODIF DU MERCREDI ICI */
+ol #marker{
+    font-weight: bold;
+    filter: drop-shadow(0px 4px 4px #000000);
+    display: block;
+    counter-increment: increment;
+    margin-top: 50px;
+}
+
+ol #marker::before{
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-left: 42.5px;
+    background-color: #52B788;
+    color: white;
+    font-size: 150%;
+    margin-right: 5px;
+    content: counter(increment) "";
+    box-shadow: -3px 2px 2px grey;
+
+}
+ol .sous-marker{
+    counter-increment: another_increment;
+}
+
+ol li{
+    text-align: left;
+    list-style-type: none;
+    margin-top: 30px;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+#text4{
+    text-align: left;
+}
+
+ol .sous-marker::before{
+    padding-left: 9px;
+    padding-right: 9px;
+    background-color: #7F4F24;
+    color: white;
+    font-size: 150%;
+    margin-right: 5px;
+    border-radius: 20px;
+    box-shadow: -3px 2px 2px grey;
+    content: counter(another_increment) "";
+}
+
+#marker{
+    font-size: 150%;
+}
+
+p{
+    transform: scale(1);
+    line-height: 70px;
+    border-left: 0 solid #52B788;
+    transition: border-left 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+p:hover{
+    transform: scale(1.06);
+    border-left: 12px solid #52B788;
+}
+
+
+#graphe{
+    background-image: url(img/etude_marche/graphe.jpg);
+    width: 500px;
+    height: 300px;
+    background-size: contain;
+    float: right;
+    margin-top: 40px;
+}
+
+/* table */
+
+table{
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 40px;
+}
+
+
+td{  
+    padding: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+    text-align: center;
+    border-collapse: collapse;
+    border: 0.5px solid black;
+    background-color: #52B788;
+    color: white;
+    font-size: 130%;
+    font-weight: bold;
+    font-family: 'Roboto';
+
+}
+
+footer{
+    margin-top: 70px;
+    width: 100%;
+    height: 205px;
+}
+
+
+#logo-zone{
+    float: left;
+    margin-top: 50px;
+    margin-left: 42.5px;
+    width: 600px;
+    height: 100px;
+}
+
+
+
+#facebook, #instagram{
+    margin: auto;
+    margin-top: 25px;
+}
+
+
+#facebook, #instagram, #google-maps{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+}
+
+
+#facebook{
+    background-image: url(img/logo_facebook.jpg);
+}
+
+
+#instagram{
+    background-image: url(img/logo_instagram.png);
+}
+
+#google-maps{
+    background-image: url(img/logo_googlemaps.png);
+}
+
+#logo-zone a{
+    margin-left: 71px;  
+}
+
+
+
+
+
+#contact-zone{
+    text-align: center;
+    float: right;
+    margin-top: 40px;
+    margin-right: 60px;
+    width: 300px;
+    line-height: 25px;
+    height: 100px;
+    font-weight: bold;
+}
+
+#footer-zone{
+    line-height: 25px;
+}
+
+#contact-zone a{
+    font-size: 105%;
+    font-weight: bold;
+    color: black;
+}
+
+#border-right-marge{
+    margin-left: 25px;
+}
+
+
+.pillar{
+    position: relative;
+    display: inline-block;
+    width: 3px;
+    height: 128px;
+    background: #7F4F24;
+}
+
+#pillar1{
+    top: 30px;
+    left: -600px;
+}
+
+
+#pillar2{
+    top: 30px;
+    left: 540px;
+
+}
+

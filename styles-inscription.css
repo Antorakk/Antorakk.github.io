@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #52B788;
+    font-family: "Roboto";
+}
+
+#container{
+    width: 1227px ; 
+    margin: auto;
+    height: 1950px;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    filter: drop-shadow(2px 2px 2px brown);
+}
+
+#nav-bar{
+    padding-top: 20px;
+}
+
+#nav-bar a{
+    font-style: normal;
+    letter-spacing: 10%;
+    line-height: 35px;
+    height:40px;
+    text-align: center;
+    text-decoration:none;
+    color: black;
+    width: 150px;
+    font-family: "Bebas Neue" ;
+}
+
+#nav-bar a:hover{
+    background-color: #327e5b;
+    color: white;
+}
+
+#firstelem, .marge {
+    float: left;
+}
+
+#firstelem{
+    margin-left: 180px;
+}
+
+#lastelem{
+    float: right;
+    margin-right: 42.5px;
+}
+
+#logo{
+    position: relative;
+    width: 170px;
+    height: 57px;
+    top: 60px;
+    left: 42.5px;
+    background-image: url(img/logo_iut.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+
+
+#banner{
+    background-image: url(img/inscription/banniere.jpg);
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-position-y: -80px;
+    box-sizing: border-box;
+    width: 1142px;
+    height: 319px;
+    margin: auto;
+    margin-top: 100px;
+    filter: drop-shadow(5px 5px 4px #52B788);
+}
+
+/* code ajouté à partir d'ici */
+
+#click-ensavoirplus{
+    position: relative;
+    display: flex;
+    z-index: 99;
+    top: -150px;
+    left: 900px;
+    height: 100px;
+    width: 240px;
+    /*background-color: rgba(143,255,194,.5); */
+}
+
+
+#click-ensavoirplus a{
+    font-family: 'Roboto', sans-serif Bold 700;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    font-size: 115%;
+    line-height: 90px;
+
+    text-transform: uppercase;
+    text-decoration: unset;
+    color: black;
+    font-weight: bold;
+}
+
+#click-ensavoirplus a::after{
+    /* permet l'animation */
+    
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(143, 255, 194, 0.5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateX(-240px);
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+#click-ensavoirplus a:hover:after{
+    transform: translateX(0);
+}
+
+
+#accroche{
+    margin-top: -30px;
+    margin-left: 42.5px;
+    width: 93%;
+    height: 30px;
+}
+
+#accroche p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+#accroche::after{
+    content:"";
+    display: block;
+    position: absolute;
+    left: 35%;
+    transform: scale(0);
+    width: 30%;
+    height: 2px;
+    background-color: black;
+
+
+    /*animation*/
+
+    transition: transform 0.2s ease-in-out;
+}
+
+#accroche:hover::after{
+    transform: scale(1);
+}
+
+
+
+#img-left, #cto-reglement, #img-right{
+    display: inline-block;
+    margin-left: 140px;
+    margin-top: 75px;
+}
+
+#img-left, #img-right{
+    width: 225px;
+    height: 225px;
+}
+
+#img-left{
+    background-image: url(img/inscription/gauche.jpg);
+    background-size: cover;
+    filter: drop-shadow(5px 5px 4px #52B788);
+}
+
+#img-right{
+    background-image: url(img/inscription/droite.jpg);
+    background-size: cover;
+    filter: drop-shadow(5px 5px 4px #52B788);
+}
+
+
+
+#cto-reglement{
+    width: 225px;
+    height: 225px;
+    background-color: #8FFFC2;
+    position: relative;
+    top: -5px;
+    font-family: "Roboto";
+    font-weight: bold;
+    text-align: center;
+    filter: drop-shadow(3px 4px 3px black);
+}
+
+#cto-reglement h2{
+    text-decoration: underline;
+}   
+
+#cto-reglement p{
+    margin-top: 5px;
+    line-height: 21.5px;
+    color: black;
+}
+
+#cto-reglement a{
+    color: brown;
+}
+
+#cto-reglement a:hover{
+    color: white;
+}
+
+
+
+#img-right:hover, #img-left:hover, #cto-reglement:hover{
+    transform: scale(1.15);
+    transition: 0.5s ease-in-out;
+}
+
+h1{
+    position: relative;
+    left: 50%;
+    top: 7%;
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    display: block; 
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
+h1::after{
+    content:"";
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    width: 100%;
+    height: 2px;
+    background-color: black;
+
+    /* effet animation */
+
+    transition: transform 0.2s ease-in-out;
+}
+
+h1:hover::after{
+    transform: scale(1);
+}
+
+
+#contain{
+    width: 500px;
+    margin: auto;
+    margin-top: 90px;
+
+}
+
+#formulaire{
+    margin: auto;
+    width: 500px;
+    border-radius: 5%;
+}
+
+.main-form, #send-box{
+
+    display: inline-block;
+
+}
+
+#first-margin, #second-margin{
+    margin-left: 70px;
+}
+
+#first-form{
+    padding-top: 40px;
+}
+
+.main-form{
+    padding-bottom: 25px;
+}
+
+input, select{
+    width: 100%;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+select{
+    height: 30px;
+    font-family: 'Comfortaa', cursive;
+}
+
+#send-box{
+    display: flex;
+    justify-content: center;
+}
+
+#send-box input{
+    width: 60%;
+    background: none;
+}
+ 
+
+#send-box input:hover{
+    background-color: rgba(143, 255, 194, 0.5);
+}
+
+
+.check-box input{
+    position: relative;
+    z-index: 1;
+    left: -120px;
+    top: 30px;
+}
+
+#contain p{
+    margin: auto;
+    width: 200px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+
+}
+
+#contain a{
+    color: green;
+}
+
+#send-box{
+    padding-bottom: 50px;
+}
+
+
+
+/* ------------------------------------- */
+
+footer{
+    margin-top: 50px;
+    width: 100%;
+    height: 205px;
+}
+
+
+#logo-zone{
+    float: left;
+    margin-top: 50px;
+    margin-left: 42.5px;
+    width: 600px;
+    height: 100px;
+}
+
+
+
+#facebook, #instagram{
+    margin: auto;
+    margin-top: 25px;
+}
+
+#google-maps{
+    background-image: url(img/logo_googlemaps.png);
+}
+
+#facebook, #instagram, #google-maps{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+}
+
+
+#facebook{
+    background-image: url(img/logo_facebook.jpg);
+}
+
+
+#instagram{
+    background-image: url(img/logo_instagram.png);
+}
+
+#logo-zone a{
+    margin-left: 71px;  
+}
+
+
+
+
+
+#contact-zone{
+    text-align: center;
+    float: right;
+    margin-top: 40px;
+    margin-right: 60px;
+    width: 300px;
+    line-height: 25px;
+    height: 100px;
+    font-weight: bold;
+}
+
+#contact-zone a{
+    font-size: 105%;
+    font-weight: bold;
+    color: black;
+}
+
+#border-right-marge{
+    margin-left: 25px;
+}
+
+
+.pillar{
+    position: relative;
+    display: inline-block;
+    width: 3px;
+    height: 128px;
+    background: #7F4F24;
+}
+
+#pillar1{
+    top: 30px;
+    left: -600px;
+}
+
+
+#pillar2{
+    top: 30px;
+    left: 540px;
+
+}
+

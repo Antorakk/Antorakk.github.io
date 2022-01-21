@@ -1,0 +1,439 @@
+/* Commentaires réalisés par FLAMENT Marina */
+/*Vous vous trouvez dans le css de la page information de notre site web sur le cyclo-cross*/
+/*-------------------------------------------------------------------------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Roboto";
+    background-color: #52B788;
+    
+}
+
+/*fond blanc*/
+#container{
+    width: 1227px ;
+    margin: auto;
+    height: 1650px;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*Ceci est le menu*/
+
+#nav-bar{
+    padding-top: 20px;
+}
+
+/*lien du menu*/ 
+#nav-bar a{
+    font-style: normal;
+    letter-spacing: 10%;
+    line-height: 35px;
+    height:40px;
+    text-align: center;
+    text-decoration:none;
+    color: black;
+    width: 150px;
+    font-family: "Bebas Neue" ;
+}
+
+/*survole des liens du menu*/
+#nav-bar a:hover{
+    background-color: #327e5b;
+    color: white;
+}
+
+/*tous les onglets du menu sauf "nous contacter"*/
+#firstelem, .marge {
+    float: left;
+}
+
+/*onglet accueil*/
+#firstelem{
+    margin-left: 180px;
+}
+
+/*onglet nous contacter*/
+#lastelem{
+    float: right;
+    margin-right: 42.5px;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*Ceci est le logo de l'IUT que nous mettons en place*/
+#logo{
+    position: relative;
+    width: 170px;
+    height: 57px;
+    top: 60px;
+    left: 42.5px;
+    background-image: url(img/logo_iut.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5)); /*ombre sur le logo*/
+}
+
+/*---------------------------------------------------------------------------------------*/
+/*Ceci est la bannière, positionnée en-dessus du menu*/
+
+#banner{
+    background-image: url(img/information/banniere.jpg);
+    background-repeat: no-repeat;
+    background-size: cover ;
+    box-sizing: border-box;
+    background-position-y: -700px;
+    width: 1142px;
+    height: 319px;
+    margin: auto;
+    margin-top: 100px;
+    filter: drop-shadow(5px 5px 4px #52B788);
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+/*Bouton en savoir plus, qui renvoie vers le réglement, positionné sur la bannière*/
+
+#click-ensavoirplus{
+    position: relative;
+    display: flex;
+    z-index: 99; /*permet de se positionner sur l'image*/
+    top: -240px;
+    left: 900px;
+    height: 100px;
+    width: 240px;
+}
+
+/*Bouton inscription, qui renvoie vers le formulaire, positionné sur la bannière*/
+#click-inscription{
+    position: relative;
+    display: flex;
+    z-index: 99;
+    top: -210px;
+    left: 900px;
+    height: 100px;
+    width: 240px;
+}
+
+/*lien des boutons précédents*/
+#click-inscription a, #click-ensavoirplus a{
+
+    font-family: 'Roboto';
+    letter-spacing: 5px; /*espacement entre les lettres*/
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /*le surplus est caché*/
+    text-align: center;
+    font-size: 115%;
+
+    text-transform: uppercase;
+    text-decoration: unset; /*enlève le soulignement*/
+    color: white;
+    font-weight: bold;
+}
+
+#click-inscription a{
+    line-height: 50px; /*hauteur entre les lignes*/
+}
+
+#click-ensavoirplus a{
+    line-height: 90px; /*hauteur entre les lignes*/
+}
+
+#click-inscription a::after, #click-ensavoirplus a::after{
+    /* permet l'animation*/
+
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(143, 255, 194, 0.5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateX(-240px);  /*Tranlation de -240 pixel en X, permet l'animation du bouton*/
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1)/* 4 transition combiné en une seule propriété (cubic
+    besier) qui permet le déplacement d'un rectangle entier, le 0.5s correspond au temps de l'animation*/;
+}
+
+#click-inscription a:hover::after, #click-ensavoirplus a:hover::after{
+    transform: translateX(0); /*On revient à l'emplacement initial */
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/*Ceci est l'accroche, la petite citation*/
+
+#accroche{
+    width: 1000px;
+    height: 100px;
+    margin-left: 120px;
+    margin-top: -35px;
+}
+
+/*texte de la citation*/
+#accroche h1{
+    font-family: 'Roboto';
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    background-color: rgba(143,255,194,.5);
+    padding: 20px;
+}
+
+/*Nom de l'auteur*/
+#accroche p{
+    text-align: right;
+    margin-right: 10px;
+    font-size: 80%;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------*/
+/*Ceci est la première photo, qui représente le vélo*/
+
+#photo1{
+    background-image: url(img/information/image1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    width: 250px;
+    height: 250px;
+    margin-top: 40px;
+    margin-left: 43px;
+    filter: drop-shadow(4px 4px 4px #000000); /*ombre*/
+    background-position-x: -40px; /*positionnement de la photo par rapport aux autres éléments*/
+}
+
+
+/*------------------------------------------------------------------------------------------------*/
+/*Ceci est la phrase où apparait la date de l'événement*/
+
+#infeve{
+    width: 232px;
+    height: 50px;
+    background-color: #6cd6a1;
+    border-radius: 25px; /*bords arrondis*/
+    font-family: Roboto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 25px;
+    margin-top: 80px;
+    margin-left: 43px;
+    font-weight: bold;
+    padding : 15px;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*Ceci est la deuxième photo, où l'on voit l'ombre du vélo et son conducteur*/
+
+#photo2{
+    background-image: url(img/information/image2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    width: 250px;
+    height: 250px;
+    margin-top: 80px;
+    margin-left: 43px;
+    filter: drop-shadow(4px 4px 4px #000000); /*ombre sur l'image*/
+    background-position-x: -70px;
+}
+
+/*----------------------------------------------------------------------------------------------------------*/
+/*Lors du survolement, les images et l'information grossissent*/
+
+#photo1:hover, #photo2:hover, #infeve:hover{
+    transform: scale(1.15);
+    transition: 0.5s ease-in-out;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*Bloc de texte où se trouve l'organisation et les informations*/
+
+#information{
+    background-color: #656d4a;
+    width: 840px;
+    height: 740px;
+    margin-left: 340px;
+    position: relative;
+    top:-740px;
+    background-color: white;
+    filter: drop-shadow(1px 1px 1px black);
+    line-height: 42.5px;
+
+    border-left: 0 solid #52B788; /*Ici*/
+    transition: border-left 0.5s ease-in-out;
+}
+
+/*Lors du survolement, */
+#information:hover{
+    border-left: 12px solid #52B788;
+}
+
+/*Cette pseudo-classe gère les paddings des paragraphes*/
+.padd{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-family: roboto;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*Ici, on gère les titres h3*/
+#petitpadding, #titre3{
+    font-family: 'roboto';
+    text-align: center;
+    font-size: 40px;
+}
+
+/*Premier titre h3, gère le padding*/
+#petitpadding{
+    padding-top: 20px;
+}
+
+/*Deuxième titre h3, gére le margin*/
+#titre3{
+    margin-top: 70px;
+}
+
+/*Deuxième paragraphe*/
+#paragraphe{
+    padding-top: 5px;
+    text-align: center;
+    font-family: roboto;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+/*soulignement avec animation*/
+
+h3::after{
+    content:"";
+    display: block;
+    position: relative;
+    left: 33%;
+    transform: scale(0);
+    width: 33%;
+    height: 2px;
+    background-color: black;
+    transition: transform 0.2s ease-in-out;
+}
+
+h3:hover::after{
+    transform: scale(1);
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*Ceci est le footer*/
+
+footer{
+    margin-top: -700px;
+    width: 100%;
+    height: 205px;
+}
+
+/*Réseaux sociaux*/
+#logo-zone{
+    float: left;
+    margin-top: 50px;
+    margin-left: 42.5px;
+    width: 600px;
+    height: 100px;
+}
+
+#facebook, #instagram{
+    margin: auto;
+    margin-top: 25px;
+}
+
+#google-maps{
+    background-image: url(img/logo_googlemaps.png);
+}
+
+#facebook, #instagram, #google-maps{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+}
+
+
+#facebook{
+    background-image: url(img/logo_facebook.jpg);
+}
+
+
+#instagram{
+    background-image: url(img/logo_instagram.png);
+}
+
+#logo-zone a{
+    margin-left: 71px;  
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------*/
+/*Zone de contact*/
+#contact-zone{
+    text-align: center;
+    float: right;
+    margin-top: 40px;
+    margin-right: 60px;
+    width: 300px;
+    line-height: 25px;
+    height: 100px;
+    font-weight: bold;
+}
+
+#contact-zone a{
+    font-size: 105%;
+    font-weight: bold;
+    color: black;
+}
+
+#border-right-marge{
+    margin-left: 25px;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*Deux barres verticales sur les extrémités du footer*/
+.pillar{
+    position: relative;
+    display: inline-block;
+    width: 3px;
+    height: 128px;
+    background: #7F4F24;
+}
+
+#pillar1{
+    top: 30px;
+    left: -600px;
+}
+
+
+#pillar2{
+    top: 30px;
+    left: 540px;
+
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+/* fin du CSS */
